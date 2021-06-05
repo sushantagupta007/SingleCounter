@@ -17,7 +17,17 @@ const handleChange = (e) =>{
     else if(e.currentTarget.classList.contains('btn-reset')){
         counter_number=0;
     }
-  
+    if (counter_number > 0) {
+        counter.style.color = "#4287f5";
+        console.log("Hello")
+      }
+      if (counter_number < 0) {
+        counter.style.color = "red";
+        console.log("Hlw")
+      }
+      if (counter_number === 0) {
+        counter.style.color = "#222";
+      }
    
     counter.textContent=counter_number;
 }
